@@ -24,6 +24,34 @@ public class SkiTrip {
         this.totalCost = processFee * this.durationInDays; // calculation 
     }
 
+    // Getters 
+    public String getName() {
+        return name; 
+    }
+    public String getDestination() {
+        return destination; 
+    }
+    public int getDuration() {
+        return duration; 
+    }
+    public boolean getRentals() {
+        return rentals; 
+    }
+
+    // Setters 
+    public void setName(String newName) {
+        this.name = newName; 
+    }
+    public void setDestination(String newDestination) {
+        this.destination = newDestination; 
+    } 
+    public void setDuration(int newDuration) {
+        this.duration = newDuration; 
+    }
+    public void setRentals(boolean newRentals) {
+        this.rentals = newRentals; 
+    }
+
      public String toString() {
         String state = "SkiTrip[" + travelerName + ", " + destination + ", " + durationInDays + ", " + needRentals + ", " + totalCost + "]"; 
         return state; 

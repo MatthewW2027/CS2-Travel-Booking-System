@@ -25,35 +25,52 @@ public class SkiTrip {
     }
 
     // Getters 
-    public String getName() {
-        return name; 
+    public String getTravelerName() {
+        return travelerName; 
     }
     public String getDestination() {
         return destination; 
     }
-    public int getDuration() {
-        return duration; 
+    public int getDurationInDays() {
+        return durationInDays; 
     }
-    public boolean getRentals() {
-        return rentals; 
+    public boolean getNeedRentals() {
+        return needRentals; 
     }
 
     // Setters 
-    public void setName(String newName) {
-        this.name = newName; 
+    public void setTravelerName(String newTravelerName) {
+        this.travelerName = newTravelerName; 
     }
     public void setDestination(String newDestination) {
         this.destination = newDestination; 
     } 
-    public void setDuration(int newDuration) {
-        this.duration = newDuration; 
+    public void setDurationInDays(int newDurationInDays) {
+        this.durationInDays = newDurationInDays; 
     }
-    public void setRentals(boolean newRentals) {
-        this.rentals = newRentals; 
+    public void setNeedRentals(boolean newNeedRentals) {
+        this.needRentals = newNeedRentals; 
+    }
+    public void setTotalCost() {
+        double rentalFee = 0.0; 
+        if (needRentals == true) {
+            rentalFee = 100.50;  
+        }
+        this.totalCost = processFee * this.durationInDays + rentalFee; 
     }
 
      public String toString() {
-        String state = "SkiTrip[" + travelerName + ", " + destination + ", " + durationInDays + ", " + needRentals + ", " + totalCost + "]"; 
-        return state; 
+        String itinerary = "-----------------------------------------\n" +
+                            "       ✨⛷️ Ski Trip ⛷️✨        \n" +
+                            "-----------------------------------------\n" +
+                            "GUEST NAME:    " + travelerName + "\n" +
+                            "DESTINATION:   " + destination + "\n" +
+                            "STAY DURATION: " + durationInDays + " Nights\n" +
+                            "NEED RENTALS: " + needRentals + " \n " +
+                            "-----------------------------------------\n" +
+                            "TOTAL COST:  $" + totalCost + "\n" +
+                            "-----------------------------------------\n" +
+                            "  Thank you for booking with Wanderlust! \n";
+        return itinerary;  
     }
 }

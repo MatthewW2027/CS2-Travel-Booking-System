@@ -51,6 +51,7 @@ public class Main {
       newTrip.setDestination(clientDestination);
       newTrip.setDurationInDays(clientDuration);
       newTrip.setNeedRentals(clientRentals);
+      newTrip.setTotalCost(); // calculate total trip cost 
 
       // 4. Return the completed travel object 
       return newTrip;
